@@ -1,0 +1,64 @@
+/* ---------------------------------------------Importing fonts--------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: centuryGothic;
+  src: url(fonts/CenturyGothic.woff);
+}
+.centuryGothic {
+  font-family: centuryGothic;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: bigerOver;
+  src: url(fonts/BigerOver.otf);
+}
+.bigerOver {
+  font-family: bigerOver;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: sansationRegular;
+  src: url(fonts/Sansation_Regular.woff);
+}
+.sansationRegular {
+  font-family: sansationRegular;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: sansationLight;
+  src: url(fonts/Sansation_Light.woff);
+}
+.sansationLight {
+  font-family: sansationLight;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: sansationBold;
+  src: url(fonts/Sansation_Bold.woff);
+}
+.sansationBold {
+  font-family: sansationBold;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: italicFont;
+  src: url(fonts/Sansation_Italic.woff);
+}
+.italicFont {
+  font-family: italicFont;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+  font-family: italicBoldFont;
+  src: url(fonts/Sansation_Italic.woff);
+}
+.italicBoldFont {
+  font-family: italicBoldFont;
+  font-weight: bold;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+* {
+  font-family: centuryGothic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */

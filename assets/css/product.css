@@ -1,0 +1,40 @@
+.menu-image-holder {
+    float: left;
+    margin-right: 25px;
+  }
+  
+  .menu-image-holder img{
+    float: left;
+    margin-right: 25px;
+    max-width: 45vw;
+  }
+  
+  .menu-list {
+    margin: 0;
+    padding: 0;
+    max-width: 50vw;
+    list-style: none;
+    padding-top: 20px;
+  }
+  
+  .menu-list a {
+    color: black;
+    margin-bottom: 20px;
+    text-decoration: none;    
+    display: inline-block;    
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .parent {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+  }

@@ -1,0 +1,41 @@
+@keyframes animatedbg {
+  0% {
+    background-image: linear-gradient(0deg, #232020, #e0e0e0, #fefefe);
+  }
+  8.3% {
+    background-image: linear-gradient(30deg, #232020, #e0e0e0, #fefefe);
+  }
+  16.6% {
+    background-image: linear-gradient(60deg, #232020, #e0e0e0, #fefefe);
+  }
+  25% {
+    background-image: linear-gradient(90deg, #232020, #e0e0e0, #fefefe);
+  }
+  33.3% {
+    background-image: linear-gradient(120deg, #232020, #e0e0e0, #fefefe);
+  }
+  41.6% {
+    background-image: linear-gradient(150deg, #232020, #e0e0e0, #fefefe);
+  }
+  50% {
+    background-image: linear-gradient(180deg, #232020, #e0e0e0, #fefefe);
+  }
+  58.3% {
+    background-image: linear-gradient(210deg, #232020, #e0e0e0, #fefefe);
+  }
+  66.6% {
+    background-image: linear-gradient(240deg, #232020, #e0e0e0, #fefefe);
+  }
+  75% {
+    background-image: linear-gradient(270deg, #232020, #e0e0e0, #fefefe);
+  }
+  83.3% {
+    background-image: linear-gradient(300deg, #232020, #e0e0e0, #fefefe);
+  }
+  91.6% {
+    background-image: linear-gradient(330deg, #232020, #e0e0e0, #fefefe);
+  }
+  100% {
+    background-image: linear-gradient(360deg, #232020, #e0e0e0, #fefefe);
+  }
+}

@@ -1,0 +1,6 @@
+
+SELECT IF( EXISTS(SELECT quantity from orders where product_variant_id=$pv_id and cart_id=$cart_id), 1, 0) as result;
+
+limit and offset
+SELECT * FROM `productvariant` limit 10 OFFSET 5;
+gives 10 rows after skipping upto pk value 5

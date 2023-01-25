@@ -1,0 +1,282 @@
+create database ultima;
+use ultima;
+CREATE TABLE admin(
+    id bigint PRIMARY key,
+    email varchar(255) NOT null,
+    admin_pass varchar(255) not null,
+    remarks varchar(255)
+    );
+    INSERT INTO `admin`(`id`, `email`, `admin_pass`, `remarks`) VALUES ('1','ultima22@gmail.com','ulTima22@#$','active');
+
+CREATE TABLE users(
+    id bigint primary key,
+    username varchar(255),
+    email varchar(255),
+    phone varchar(255),
+    pass varchar(255),
+    user_image_path varchar(255),
+    user_img varchar(255),
+    remarks varchar(255)
+    );
+    INSERT INTO `users`(`id`, `username`, `email`, `phone`, `pass`,`user_image_path`,`user_img`,`remarks`) VALUES ('1','sangin','sangin@gmail.com','9847538520','sangin@12','img/User/','sangin.jpg','active');
+    INSERT INTO `users`(`id`, `username`, `email`, `phone`, `pass`,`user_image_path`,`user_img`,`remarks`) VALUES ('2','sabin','sabinghimire1827@gmail.com','9868348282','sangin@12','img/User/','saw.jpg','active');
+
+CREATE TABLE category (
+    id bigint primary key,
+    category_name varchar(255) not null,
+    category_type varchar(255) not null,
+    category_id varchar(255) unique not null,
+    remarks varchar(255)
+    );
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('1','earbuds','wireless','101','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('2','charger','wired','102','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('3','powerbank','wired','103','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('4','Neckband','Wireless','104','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('5','Speaker','Wireless','105','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('6','EarPhone','Wired','106','');
+    INSERT INTO `category`(`id`,`category_name`, `category_type`, `category_id`,`remarks`) VALUES ('7','DateCable','Wired','107','');
+
+create TABLE products(
+    id bigint primary key,
+    product_name varchar(255) not null,
+    category_id varchar(255) not null,
+    actual_Price decimal(15,2) not null,
+    sell_Price decimal(15,2) not null,
+    img_path varchar(255) not null,
+    primary_image varchar(255) not null,
+    secondary_image varchar(255) not  null,
+    url_link varchar(255) not  null,
+    remarks varchar(255),
+    foreign key (category_id) references category(category_id)
+    );
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (1,'Ultima Earbuds Atom 192','101','3599','2699','assets/images/products/','eardopesblue.png','openeardopesblue.png','atom192.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (2,'Ultima Earbuds Pro','101','2999','2599','assets/images/products/','earbudspro1.png','earbudspro2.png','earbudsPro.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (3,'Ultima Earbuds','101','2899','2399','assets/images/products/','earbud1.png','earbud2.png','earbud.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (4,'Ultima Beatz 355 Bluetooth Wireless Neckband','104','2699','2099','assets/images/products/','beatz355black2.png','beatz355black.png','beatzNeckband.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (5,'Wareless Neckband with Microphone','104','1899','1424','assets/images/products/','neckband yellow.png','neckband yellow 2.png','WirelessNeckBand.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (6,'Ultima 20W USB C Fast Charger','102','1099','949','assets/images/products/','20wchargerblack.png','20wchargerwhite.png','20Wcharger.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (7,'18 W Dual Port Charger','102','1099','999','assets/images/products/','18wcharger1.png','18wcharger.png','18Wcharger.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (8,'27 W Charge Adapter','102','1299','1099','assets/images/products/','27wchargerwhite.png','27wchargerwhite2.png','27Wcharger.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (9,'Ultima SW1 10W Bluetooth 5.0 Portable Stereo Speaker with Tws','105','2499','1999','assets/images/products/','sw1red.png','sw1yellow.png','SW1Speaker.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (10,'Ultima SW2 20W Bluetooth 5.0 Portable Stereo Speaker with Tws','105','3499','2849','assets/images/products/','speaker.png','speaker1.png','SW2Speaker.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (11,'Ultima Atom Pro 20000 MAh Powerbank PD and QC 3.0','103','3899','2999','assets/images/products/','20kpowerbankblack.png','20kpowerbankblue.png','20Kpowerbank.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (12,'Ultima Atom 10000 Mah Powerbank','103','3499','1999','assets/images/products/','10kpowerbank.png','10kpowerbankwhite.png','10Kpowerbank.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (13,'Ultima Micro Data Cable','107','500','350','assets/images/products/','datacablewhite.png','datacableblack.png','datacable.php','');
+    INSERT INTO `products`(`id`, `product_name`, `category_id`, `actual_Price`, `sell_Price`, `img_path`, `primary_image`, `secondary_image`, `url_link`, `remarks`) 
+    VALUES (14,'Ultima Rockerz Series ULT-030 Stereo Dynamic Earphone','106','649','349','assets/images/products/','earephonewhite.png','earphoneblack.png','earphone.php','');
+
+create table colors(
+    id bigint primary key AUTO_INCREMENT,
+    color_name varchar(255) unique,
+    color_code varchar(255) unique,
+    remarks varchar(255)
+    );
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('1','red','#ff0000','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('2','black','#000000','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('3','Cyan','#00FFFF','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('4','Blue','#0000FF','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('5','Yellow','#FFFF00','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('6','Silver','#C0C0C0','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('7','White','#ffffff','');
+    INSERT INTO `colors`(`id`, `color_name`, `color_code`, `remarks`) VALUES ('8','Green','#008000','');
+
+
+create table productVariant(
+    id bigint primary key AUTO_INCREMENT,
+    product_id bigint not null,
+    color_id bigint not null,
+    stock_in bigint default 0 not null,
+    stock_out bigint default 0 not null,
+    defective bigint default 0 not null,
+    returned bigint default 0 not null,
+    available bigint default (stock_in-stock_out-defective+returned),
+    total bigint default (available+defective+returned),
+    remarks varchar(255),
+    foreign key (color_id) references colors(id),
+    foreign key (product_id) references products(id)
+    );
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('1','2','4000','1530','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('1','6','3000','1250','25','8','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('1','3','2000','120','15','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('2','7','2000','1225','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('3','7','5500','1100','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('4','1','5100','1305','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('4','4','1500','900','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('5','5','1200','1150','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('5','2','6000','1650','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('6','2','3000','2653','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('7','7','5000','4562','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('8','7','800','583','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('9','1','6000','3508','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('9','2','8000','1685','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('9','4','600','479','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('9','5','6000','3658','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('9','8','4000','1234','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('10','2','3800','3512','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('11','1','2000','1066','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('11','2','6000','3516','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('11','7','5000','651','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('11','4','1000','985','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('12','1','8000','2553','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('12','2','9000','3598','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('12','4','7000','3456','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('12','7','4000','2699','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('13','2','5000','3646','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('13','7','3000','2989','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('14','7','2000','1200','20','10','');
+    INSERT INTO `productVariant`(`product_id`, `color_id`, `stock_in`, `stock_out`, `defective`, `returned`, `remarks`) VALUES ('14','2','900','782','20','10','');
+    
+CREATE table productVariant_image(
+    id bigint primary KEY not null AUTO_INCREMENT,
+    product_varient_id bigint not null,
+    img_path varchar(255) not null,
+    img varchar(255) not null,
+    remarks varchar(255),
+    foreign key(product_varient_id) references productVariant(id)
+    );
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (1,'assets/images/products/atom192/','eardopesblack.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (2,'assets/images/products/atom192/','eardopesgray.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (3,'assets/images/products/atom192/','eardopesblue.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (4,'assets/images/products/earbudspro/','earbudspro1.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (5,'assets/images/products/earbuds/','earbud1.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (6,'assets/images/products/Beatz Neckband/','beatz355black.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (7,'assets/images/products/Beatz Neckband/','beatz355blue.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (8,'assets/images/products/Wireless Neakband/','neckband yellow.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (9,'assets/images/products/Wireless Neakband/','Neckband black.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (10,'assets/images/products/20wcharger/','20wchargerblack.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (11,'assets/images/products/18w charger/','18wcharger.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (12,'assets/images/products/27w charger/','27wchargerwhite2.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (13,'assets/images/products/SW1 Speaker/','sw1red.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (14,'assets/images/products/SW1 Speaker/','SW1BLACK.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (15,'assets/images/products/SW1 Speaker/','SW1blue.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (16,'assets/images/products/SW1 Speaker/','sw1yellow.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (17,'assets/images/products/SW1 Speaker/','SW1green.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (18,'assets/images/products/SW2 speaker/','speaker1.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (19,'assets/images/products/10K Powerbank/','10kpowerbank.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (20,'assets/images/products/10K Powerbank/','10kpowerbankwhite.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (21,'assets/images/products/10K Powerbank/','10kpowerbank.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (22,'assets/images/products/10K Powerbank/','10kpowerbankwhite.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (23,'assets/images/products/20K Powerbank/','20kpowerbankred.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (24,'assets/images/products/20K Powerbank/','20kpowerbankblack.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (25,'assets/images/products/20K Powerbank/','20kpowerbankblue.png','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (26,'assets/images/products/20K Powerbank/','20kpowerbankwhite.png ','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (27,'assets/images/products/datacable/','datacableblack.png ','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (28,'assets/images/products/datacable/','datacablewhite.png ','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (29,'assets/images/products/earphone/','earephonewhite.png ','');
+    INSERT INTO `productVariant_image`(`product_varient_id`, `img_path`, `img`, `remarks`) VALUES (30,'assets/images/products/earphone/','earphoneblack.png ','');
+
+
+create table cart(
+    id bigint primary key AUTO_INCREMENT,
+    tmp_id varchar(255) not null,
+    user_id bigint,
+    remarks varchar(255),
+    foreign key (user_id) references users(id)
+    );
+
+CREATE TABLE orders(
+    id bigint primary key AUTO_INCREMENT,
+    quantity int(6) not null,
+    product_variant_id bigint not null,
+    cart_id bigint not null,
+    remarks varchar(255),
+    foreign key (product_variant_id) REFERENCES productVariant(id),
+    foreign key (cart_id) REFERENCES cart(id)
+    );
+
+CREATE TABLE reviews( 
+    id bigint primary key AUTO_INCREMENT,
+    product_id bigint not null,
+    user_id bigint not null,
+    user_name varchar(255) not null,
+    review_point int(1) not null,
+    review_message text not null,
+    attachment varchar(255),
+    submit_date int(11) not null,
+    remarks varchar(255),
+    FOREIGN KEY (user_id) references users(id),
+    FOREIGN KEY (product_id) references products(id)
+    );
+    INSERT INTO `reviews`(`id`, `product_id`, `user_id`, `user_name`, `review_point`, `review_message`, `attachment`, `submit_date`, `remarks`) VALUES ('1','1','1','Sangin','5','Atom is best','a.png',now(),'');
+
+    CREATE table faqs(
+    id bigint PRIMARY key AUTO_INCREMENT,
+    product_id bigint NOT null,
+    question varchar(255) NOT null,
+    answer varchar(255) NOT null,
+    modify_date datetime DEFAULT now(),
+    remarks varchar(255),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+    );
+
+    create table carousel(
+    id bigint PRIMARY KEY AUTO_INCREMENT,
+    bannerName varchar(255) NOT null,
+    img_path varchar(255) NOT null,
+    img varchar(255) NOT null,
+    remarks varchar(255)
+    );
+
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 1','assets/images/banners/','banner0.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 2','assets/images/banners/','banner1.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 3','assets/images/banners/','banner2.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 4','assets/images/banners/','banner3.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 5','assets/images/banners/','banner4.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 6','assets/images/banners/','banner5.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 7','assets/images/banners/','banner6.jpg','');
+    INSERT INTO `carousel`(`bannerName`, `img_path`, `img`, `remarks`) VALUES ('Banner 9','assets/images/banners/','banner7.jpg','');
+
+
+
+
+CREATE TABLE delivery_payment_details(
+    id bigint primary key,
+    full_name varchar(255) not null,
+    province varchar(255) not null,
+    district varchar(255) not null,
+    city varchar(255) not null,
+    municipality varchar(255) not null,
+    tole varchar(255) not null,
+    phone varchar(20) not null,
+    cart_id bigint not null,
+    payment_mode varchar(255) not null,
+    payment_status varchar(255) ,
+    delivery_status varchar(255) ,
+    deliverd_by varchar(255),
+    deliverd_on datetime,
+    reference_no varchar(20) not null unique,
+    modify_date datetime not null default now(),
+    remarks varchar(1000),
+    foreign key (cart_id) references cart(id)
+);
+
+
+CREATE TABLE checkouts(
+    id bigint primary key AUTO_INCREMENT,
+    cart_id bigint not null,
+    product_v_id bigint not null,
+    quantity bigint not null,
+    rate decimal(10,2) not null,
+    discount decimal(10,2) not null,
+    total decimal(10,2) default ((quantity*rate)-discount),
+    dpd_id bigint not null,
+    delivery_status varchar(255),
+    modify_date datetime not null default now(),
+    remarks varchar(1000),
+    FOREIGN KEY (dpd_id) REFERENCES delivery_payment_details(id),
+    FOREIGN KEY (cart_id) REFERENCES cart(id),
+    FOREIGN KEY (product_v_id) REFERENCES productVariant(id)
+);

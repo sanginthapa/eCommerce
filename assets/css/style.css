@@ -1,0 +1,193 @@
+body{
+  overflow-x:hidden !important;
+}
+
+/*for search */
+.search_item_display>div {
+padding: 0.3rem 0.2;
+}
+.custom_hr {
+padding: 0;
+margin: 0;
+}
+/*for search */
+
+#products{
+    border-radius:5px;
+}
+/* container that display only in big screen  */
+/* container that display only in big screen  */
+.div-display-on-big {
+  display: none;
+}
+/* container that display only in big screen  */
+/* container that display only in big screen  */
+
+/* dropdown css */
+/* dropdown css */
+.dropdown-item {
+  color: white !important;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #1e2125 !important;
+  background-color: #bcc3c9 !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute !important;
+  background-color: #f9f9f9;
+  width: 1830%;
+  left: 60px !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  /* flex-basis: 30%; */
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 3px;
+  background-color: transparent;
+  /* height: 250px; */
+}
+/* dropdown css */
+/* dropdown css */
+
+/* mytable css */
+/* mytable css */
+.mytable {
+  overflow: hidden;
+  border-radius: 1em;
+  font-size: 18px;
+}
+
+/* mytable css */
+/* mytable css */
+
+/* display div 1  */
+/* display div 1  */
+.mydisplaydiv1 {
+  min-height: 70vh;
+}
+/* display div 1  */
+/* display div 1  */
+
+/* product font size milako hai  */
+/* product font size milako hai  */
+.product-font-size {
+  font-size: 1rem;
+}
+/* product font size milako hai  */
+/* product font size milako hai  */
+
+/* submenu margin  */
+/* submenu margin  */
+.submenuMargin {
+  margin-left: -545px;
+}
+/* submenu margin  */
+/* submenu margin  */
+
+/* for border to left and bottem with shadow top and right */
+/* for border to left and bottem with shadow top and right */
+.border-with-white-background {
+  box-shadow: 0px 4px 10px white;
+  border: 5px solid;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 10px;
+  padding: 5px 25px 5px 25px;
+  border-top: 1px solid;
+  /* border-radius: 50%; */
+}
+/* for border to left and bottem with shadow top and right */
+/* for border to left and bottem with shadow top and right */
+
+/* animation class haru */
+/* animation class haru */
+
+.animatebg {
+  animation-name: animatedbg;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+/* animation class haru */
+/* animation class haru */
+
+/* @fonts import */
+@font-face {
+  font-family: "EduTASBeginner-VariableFont_wght";
+  src: url("../fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf");
+  src: url("../fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf")
+      format("ttf"),
+    url("../fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf")
+      format("opentype"),
+    url("CustomFont.svg#filename") format("svg");
+}
+
+.beastmode {
+  background-image: url("assets\images\products\Beatz Nackband\pubg.png");
+}
+
+/* discount-banner  */
+/* discount-banner  */
+/* discount-banner  */
+/* discount-banner  */
+.discount-banner {
+  height: 60vh;
+  width: 60vh;
+}
+/* discount-banner  */
+/* discount-banner  */
+/* discount-banner  */
+/* discount-banner  */
+
+/*for invoice */
+/*for invoice */
+/*for invoice */
+.body-main {
+			background: #ffffff;
+			border: 1px solid;
+			/* border-bottom: 5px solid #1E1F23;
+			border-top: 5px solid #1E1F23; */
+			/* margin-left: 100px;
+			margin-top: 30px;
+			margin-bottom: 30px; */
+			padding: 40px 30px !important;
+			position: relative;
+			/* box-shadow: 0 1px 21px #808080; */
+			font-size: 10px;
+		}
+/*for invoice */
+/*for invoice */
+/*for invoice */
+
+
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+
+/* .col {
+  height: 300px;
+  width: auto;
+} */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
+/* for test purpose only  */
