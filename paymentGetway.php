@@ -1,20 +1,22 @@
 <!-- script   -->
 <!-- script   -->
 <!--<button type="button" id="esewaPayIT" data-refID="ult-01-02" data-amt="500">-->
-    Check
+
 </button>
 <?php
+$sessionEmial ='no email';
 if (isset($_SESSION['email'])) {
+    global $sessionEmial;
      '<div class="text-danger"> This is ' . $_SESSION['email'] . '<br></div>';
     if ($_SESSION['email'] != '') {
-         ($_SESSION['login_status'] = 1);
+        ($_SESSION['login_status'] = 1);
+        $sessionEmial = $_SESSION['email'];
     } else {
          ($_SESSION['login_status'] = 0);
     }
 } else {
      ($_SESSION['login_status'] = 0);
 }
-$sessionEmial = $_SESSION['email'];
 $sql = "SELECT `id`, `username`, `email`, `phone` FROM `users` WHERE `email` ='$sessionEmial';";
 // echo $sql;
 $conn = connectDB();
@@ -104,7 +106,8 @@ if (mysqli_num_rows($req) > 0) {
                             console.log(da.payBy);
                             var refCode=da.reference_code;
                             $("#cashONDelevary").modal('hide');
-                            var url="http://ultimanepal.com/invoice_print.php?refID="+refCode;
+                            // var url="http://ultimanepal.com/invoice_print.php?refID="+refCode;
+                            var url="invoice_print.php?refID="+refCode;
                             $("#refCode").attr("href",url);
                             $('.selected_item').fadeOut("slow", function() {$(this).remove();giveIndex();});
                             if(da.payBy=='cash_on_delivery'){

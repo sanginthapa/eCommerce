@@ -336,7 +336,7 @@ function get_Table_Data($sql)
     if (!$req) {
         return 0;
     } else if (mysqli_num_rows($req) != 0) {
-        history_table($sql, true);
+        // history_table($sql, true); //activate this if you want to know who used at what time
         $list = [];
         $i = 1;
         while ($data = mysqli_fetch_assoc($req)) {

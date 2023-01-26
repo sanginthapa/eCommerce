@@ -4,15 +4,14 @@ include 'library.php';
 date_default_timezone_set("asia/kathmandu");
 
 //submit_rating.php
-// $connect = new PDO("mysql:host=localhost;dbname=ultima", "root", "");
+$connect = new PDO("mysql:host=localhost;dbname=storage", "root", "");
 
 //   server user name 
 //   $servername = 'localhost';
 //   $username = 'ultima_client';
 //   $password = 'Ultima@2022';
 //   $dbname = 'ultima_ultima';
-    $connect = new PDO("mysql:host=localhost;dbname=ultima_ultima","ultima_client", "Ultima@2022");
-
+    // $connect = new PDO("mysql:host=localhost;dbname=ultima_ultima","ultima_client", "Ultima@2022");
 
 
 // $data = array();

@@ -140,7 +140,7 @@ function check_if_exist($sql)
 function get_Table_Data($sql)
 {
   $conn = connectdb();
-  $req = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+  $req = mysqli_query($conn, $sql);
   if (!$req) {
     return 0;
   } else if (mysqli_num_rows($req) != 0) {
@@ -193,18 +193,19 @@ function run_update_query($sql){
     $conn = connectdb();
     $req = mysqli_query($conn,$sql);
     if($req){
-        maintain_history_table($sql, $status);
-        //success
-        // echo "query executed";
-        $row = mysqli_affected_rows($conn);
-        // echo "affected Row : ".$row;
-        if($row==1){
-            return 1;
+      // echo "query executed";
+      $row = mysqli_affected_rows($conn);
+      // echo "affected Row : ".$row;
+      //success
+      if($row==1){
+          maintain_history_table($sql, true);
+          return 1;
         }else{
-            // echo mysqli_error($conn);
-            return 0;
+          // echo mysqli_error($conn);
+          return 0;
         }
-    }else{
+      }else{
+        maintain_history_table($sql, false);
         //failed
     }
 }
@@ -414,6 +415,7 @@ function generate_code()
 // function to send email 
 // function to send email 
 function sendEmail($to,$sub,$body,$from){
+  return 1;// to make it work in local environment ; comment this to make it work in server
     // echo "sendEmail<br>";
     $to_email = $to;
     $subject = $sub;
