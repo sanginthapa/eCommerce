@@ -22,9 +22,10 @@ CREATE TABLE IF NOT EXISTS users(
     pass varchar(255),
     user_image_path varchar(255),
     user_img varchar(255),
+    user_state varchar(255) default 'not verified',
     remarks varchar(255)
     );
-    INSERT INTO `users`(`id`, `username`, `email`, `phone`, `pass`,`user_image_path`,`user_img`,`remarks`) VALUES ('1','sangin','sangin@gmail.com','9847538520','sangin@12','img/User/','sangin.jpg','active');
+    INSERT INTO `users`(`id`, `username`, `email`, `phone`, `pass`,`user_image_path`,`user_img`,`user_state`,`remarks`) VALUES ('1','sangin','sangin@gmail.com','9847538520','sangin@12','img/User/','sangin.jpg','verified','active');
 CREATE TABLE IF NOT EXISTS category (
     id bigint primary key,
     category_name varchar(255) not null,
