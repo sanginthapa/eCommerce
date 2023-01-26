@@ -43,7 +43,7 @@ function setCart($guid)
 {
     $conn = connectdbonce();
     $temp_user_id = 1;
-    $query = "INSERT INTO `cart`(`tmp_id`, `user_id`, `remarks`) VALUES ('$guid',$temp_user_id,'');"; echo $query;
+    $query = "INSERT INTO `cart`(`tmp_id`, `user_id`, `remarks`) VALUES ('$guid',$temp_user_id,'');"; //echo $query;
     $req = mysqli_query($conn, $query);
     if ($req === false) {
         echo "cannot Execute Request";
