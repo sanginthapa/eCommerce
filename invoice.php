@@ -251,10 +251,12 @@
             if (da.status_code == 200) {
                 var refCode=da.ref_code;
                 console.log(refCode);
-             window.location.href='https://ultimanepal.com/cartOut.php?refID='+refCode;
+            //  window.location.href='https://ultimanepal.com/cartOut.php?refID='+refCode;
+             window.location.href='cartOut.php?refID='+refCode;
             }else{
                 alert('Reference Code Didnot Match.');
-             window.location.href='https://ultimanepal.com/cartOut.php';
+            //  window.location.href='https://ultimanepal.com/cartOut.php';
+             window.location.href='cartOut.php';
             }
            }
      });
