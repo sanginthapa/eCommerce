@@ -242,10 +242,17 @@ function history_table($query, $status)
 } // history table exist of all the query that has been executed in admin dashboard
 
 function give_executed_by(){
-    session_start();
     if(isset($_SESSION['adminemail'])){
         return $_SESSION['adminemail'];
+    }else if(!isset($_SESSION['adminemail'])){
+        session_start();
+        if(isset($_SESSION['adminemail'])){
+        return $_SESSION['adminemail'];
     }else{
+        return 'session email not set';
+    }
+    }
+    else{
         return 'session email not set';
     }
 }
@@ -439,7 +446,7 @@ function run_update_query($sql){
 }
 
 function give_level(){
-    session_start();
+    // session_start();
     $email=$_SESSION['adminemail'];
     $sql = "SELECT `superAdmin`, `admin`, `subAdmin` FROM `admin` WHERE `email`='$email';";
     $data = get_Table_Data($sql);

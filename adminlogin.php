@@ -17,11 +17,11 @@ include "header.php";
                         <span>Welcome back !!</span>
                     </div>
                     <div class="container form-floating mb-3 mt-2 w-100">
-                        <input type="email" class="form-control ps-2" name="email">
+                        <input type="email" class="form-control ps-2" name="email" value="user23@gmail.com">
                         <label class="ms-4" for="floatingInput">E-mail</label>
                     </div>
                     <div class="container form-floating w-100">
-                        <input type="password" class="form-control ps-2" name="pass">
+                        <input type="password" class="form-control ps-2" name="pass" value="User23@#$">
                         <label class="ms-4" for="floatingPassword">Password</label>
                     </div>
                     <div class="mt-3 container">
@@ -58,12 +58,12 @@ if (isset($_POST["adminSubmit"])) {
             $_SESSION['adminemail'] = $email;
             // echo "<br>email".$_SESSION['adminemail'];
 ?>
-<script>window.location.href = 'https://ultimanepal.com/assets/Dashboard/';</script>
+<script>window.location.href = 'assets/Dashboard/';</script>
 <?php
         } else {
             popMsg("Invalid or incorrect information. Please check and try again.");
             ?>
-<script>window.location.href = 'https://ultimanepal.com/adminlogin.php';</script>
+<script></script>
 <?php
         }
     }

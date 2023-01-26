@@ -43,7 +43,7 @@ function setCart($guid)
 {
     $conn = connectdbonce();
     $temp_user_id = 1;
-    $query = "INSERT INTO `cart`(`tmp_id`, `user_id`, `remarks`) VALUES ('$guid',$temp_user_id,'')";
+    $query = "INSERT INTO `cart`(`tmp_id`, `user_id`, `remarks`) VALUES ('$guid',$temp_user_id,'');"; echo $query;
     $req = mysqli_query($conn, $query);
     if ($req === false) {
         echo "cannot Execute Request";
@@ -116,10 +116,10 @@ function set_user_id($user_id,$guid){
 
 function connectdbonce()
 {
-    // $localhost = 'localhost';
-    // $root = 'root';
-    // $password = '';
-    // $dbname = 'ultima';
+    $localhost = 'localhost';
+    $root = 'root';
+    $password = '';
+    $dbname = 'storage';
 
     // server user name 
     // $localhost = 'localhost';
@@ -130,16 +130,16 @@ function connectdbonce()
     // ==============================connect database now=======================
 
 
-    // $con = mysqli_connect($localhost, $root, $password, $dbname);
+    $con = mysqli_connect($localhost, $root, $password, $dbname);
     
     
     // -----------------for only server----------------------------
     //   server user name 
-   $servername = 'localhost';
-   $username = 'ultima_client';
-   $password = 'Ultima@2022';
-   $dbname = 'ultima_ultima';
-    $con = mysqli_connect($servername, $username, $password, $dbname);
+//    $servername = 'localhost';
+//    $username = 'ultima_client';
+//    $password = 'Ultima@2022';
+//    $dbname = 'ultima_ultima';
+//     $con = mysqli_connect($servername, $username, $password, $dbname);
     // -----------------for only server----------------------------
     // echo "db connection in progresss";
     if (!$con) {

@@ -48,7 +48,7 @@ $order_processing_percentage=round(($order_processing/$total_sales_count)*100,2)
 $order_dispatched_percentage=round(($order_dispatched/$total_sales_count)*100,2); //echo '<br>'.$order_dispatched_percentage;
 $order_delivered_percentage=round(($order_delivered/$total_sales_count)*100,2); //echo '<br>'.$order_delivered_percentage;
 }
-get_delivery_details();
+// get_delivery_details();
 // deliver module
 
 //for earnings and transaction
@@ -81,8 +81,8 @@ $year_earning=round(earning_rec($this_year.'-01-01',$this_year.'-'.$this_month.'
 //for earnings and transaction
 
 // for monthly sales of last 12 month
-$month_names=array('0');
-$monthly_sales_value = array('0');
+$month_names=array(0,"January","February","March","April","May","june","July");
+$monthly_sales_value = array(0,50,18,29,21,30,49,60);
 function monthly_sales_report(){
     global $month_names;
     global $monthly_sales_value;
@@ -94,7 +94,7 @@ function monthly_sales_report(){
         array_push($monthly_sales_value,$da['monthly_sales']);
     }
 }
-monthly_sales_report();
+// monthly_sales_report();
 // echo "<br>";
 // print_r($month_names);
 // echo "<br>";
@@ -106,8 +106,8 @@ monthly_sales_report();
 // for monthly sales of last 12 month
 
 // for top 5 selling district
-$district=array();
-$deliveryCount=array();
+$district=array("Kathmandu", "Pokhara", "Dharan", "Gorkha", "Butwal");
+$deliveryCount=array(55, 49, 44, 24, 15);
 function top_selling_disticts(){
     global $district;
     global $deliveryCount;
@@ -122,6 +122,6 @@ function top_selling_disticts(){
     }
     
 }
-top_selling_disticts();
+// top_selling_disticts();
 // for top 5 selling district
 ?>

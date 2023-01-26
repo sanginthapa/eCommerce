@@ -4,11 +4,9 @@ session_start();
 if (isset($_SESSION['adminemail'])) {
     // echo "<hr><hr><hr><hr><hr><h1>".$_SESSION['adminemail']."</h1><hr><hr><hr><hr><hr>";
 } else if ($_SESSION['adminemail'] == '') {
-    // echo "<hr><h1>AAAAANNNN".$_SESSION['adminemail']."</h1><hr><hr>";
+    echo "<hr><h1>AAAAANNNN".$_SESSION['adminemail']."</h1><hr><hr>";
 ?>
-<script>    window.location.href = '../../adminlogin.php';</script>
-    
-
+<!-- <script>    window.location.href = '../../adminlogin.php';</script> -->
 <?php
 }else{
     echo "<hr><h1>No thing yr</h1><hr><hr>";

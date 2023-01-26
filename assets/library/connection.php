@@ -2,17 +2,17 @@
 
 function connectdb()
 {
-//   $localhost = 'localhost';
-//   $root = 'root';
-//   $password = '';
-//   $dbname = 'ultima';
-//   $con = mysqli_connect($localhost, $root, $password, $dbname);
+  $localhost = 'localhost';
+  $root = 'root';
+  $password = '';
+  $dbname = 'storage';
+  $con = mysqli_connect($localhost, $root, $password, $dbname);
   //   server user name 
-   $servername = 'localhost';
-   $username = 'ultima_client';
-   $password = 'Ultima@2022';
-   $dbname = 'ultima_ultima';
-$con = mysqli_connect($servername, $username, $password, $dbname);
+  //  $servername = 'localhost';
+  //  $username = 'ultima_client';
+  //  $password = 'Ultima@2022';
+  //  $dbname = 'ultima_ultima';
+// $con = mysqli_connect($servername, $username, $password, $dbname);
   // ==============================connect database now=======================
 
 
